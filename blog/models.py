@@ -21,3 +21,6 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def pub_date(self):
+        return self.publish.strftime('%b %e %Y')
