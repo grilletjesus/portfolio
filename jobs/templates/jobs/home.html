@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block title %}
 Homepage
@@ -13,7 +14,7 @@ Homepage
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link" href="#">Blog</a>
-          <a class="nav-item nav-link" href="#">Resume</a>
+          <a class="nav-item nav-link" href="{% static 'JesusGrilletEnglishResume.pdf' %}">Resume</a>
           <a class="nav-item nav-link" href="#">Contact</a>
         </div>
       </div>
@@ -28,6 +29,7 @@ Homepage
           <p>
             <a href="#" class="btn btn-primary my-2">Contact me!</a>
           </p>
+          <img class="img-fluid" src="{% static 'Jesus.jpg' %}" width=300>
         </div>
       </section>
 

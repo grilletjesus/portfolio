@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block title %}
 Jesus Grillet's Blog
@@ -13,7 +14,7 @@ Jesus Grillet's Blog
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link active" href="#">Blog</a>
-          <a class="nav-item nav-link" href="#">Resume</a>
+          <a class="nav-item nav-link" href="{% static 'JesusGrilletEnglishResume.pdf' %}">Resume</a>
           <a class="nav-item nav-link" href="#">Contact</a>
         </div>
       </div>
