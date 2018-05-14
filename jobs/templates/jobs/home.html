@@ -2,20 +2,20 @@
 {% load staticfiles %}
 
 {% block title %}
-Homepage
+Jesus Grillet
 {% endblock %}
 
 {% block content %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Jesus Grillet</a>
+      <a class="navbar-brand" href="{% url 'jobs:home' %}">Jesus Grillet</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="#">Blog</a>
+          <a class="nav-item nav-link" href="{% url 'blog:allblogs' %}">Blog</a>
           <a class="nav-item nav-link" href="{% static 'JesusGrilletEnglishResume.pdf' %}">Resume</a>
-          <a class="nav-item nav-link" href="#">Contact</a>
+          <a class="nav-item nav-link" href="{% url 'jobs:contact' %}">Contact</a>
         </div>
       </div>
     </nav>
@@ -27,7 +27,7 @@ Homepage
           <h1 class="jumbotron-heading">I'm Jesus Grillet</h1>
           <p class="lead text-muted">I'm a full stack developer and I love to provide solutions, so bring me your challenges and I will help you complete them. My websites and applications are made using Django and Python.</p>
           <p>
-            <a href="#" class="btn btn-primary my-2">Contact me!</a>
+            <a href="{% url 'jobs:contact' %}" class="btn btn-primary my-2">Contact me!</a>
           </p>
           <img class="img-fluid" src="{% static 'Jesus.jpg' %}" width=300>
         </div>

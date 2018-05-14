@@ -2,34 +2,30 @@
 {% load staticfiles %}
 
 {% block title %}
-{{ post.title }}
+Contact Page
 {% endblock %}
 
 {% block content %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="{% url 'jobs:home' %}">Jesus Grillet</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link active" href="{% url 'blog:allblogs' %}">Blog</a>
+          <a class="nav-item nav-link" href="{% url 'blog:allblogs' %}">Blog</a>
           <a class="nav-item nav-link" href="{% static 'JesusGrilletEnglishResume.pdf' %}">Resume</a>
-          <a class="nav-item nav-link" href="{% url 'jobs:contact' %}">Contact</a>
+          <a class="nav-item nav-link active" href="{% url 'jobs:contact' %}">Contact</a>
         </div>
       </div>
     </nav>
 
-
     <main role="main">
-        <div class="container">
-            <h2 class="text-center pt-1">{{ post.title }}</h2>
-            <img class="img-fluid" src="{{ post.image.url }}" width=400>
-            <p class="text">{{ post.content }}</p>
 
-        </div>
+      <h1 class="align-left">Contact info</h1>
+
+
     </main>
-
 
     <footer class="text-muted">
       <div class="container">
@@ -39,4 +35,5 @@
         <p class="container text-center">&copy; Jesus Grillet, {% now "Y" %}</p>
       </div>
     </footer>
+
 {% endblock %}
