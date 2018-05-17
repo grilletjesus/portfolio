@@ -1,5 +1,6 @@
 certifi==2018.4.16
 Django==2.0.4
+gunicorn==19.8.1
 Pillow==5.1.0
 pipenv==11.10.0
 psycopg2==2.7.4
